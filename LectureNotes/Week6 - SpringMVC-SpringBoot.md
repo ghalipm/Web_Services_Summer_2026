@@ -8,12 +8,6 @@
 
 **Sessions:** 3
 
-**Duration per Session:** 3 Hours
-
-- Theory: 20–30 minutes
--  Guided Lab: ~2 hours
-- 💬 Questions, troubleshooting and demonstrations: Remaining time
-
 ---
 
 #  Week 6 Learning Outcomes
