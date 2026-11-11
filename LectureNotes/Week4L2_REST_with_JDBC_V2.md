@@ -192,10 +192,10 @@ if ($tcp.IsEnabled -eq $false) {
 
 ```powershell
 $ipAll = $tcp.IPAddresses | Where-Object {$_.Name -eq "IPAll"}
-$ipAll.Properties["TcpPort"].Value = "1434"
+$ipAll.Properties["TcpPort"].Value = "1433"
 $tcp.Alter()
 Restart-Service -Name "MSSQLSERVER" -Force
-Write-Host "SUCCESS: Port set to 1434 and SQL Server restarted!" 
+Write-Host "SUCCESS: Port set to 1433 and SQL Server restarted!" 
 ```
 
 ### Step 4: Verify the Engine Port Connection Manually
@@ -210,7 +210,7 @@ Write-Host "SUCCESS: Port set to 1434 and SQL Server restarted!"
 EXEC sys.sp_readerrorlog 0, 1, 'listening';
 ```
  - Look at the grid output at the bottom. Verify that it confirms the listener mapping:
-`Server is listening on [ 'any' <ipv4> 1434]`
+`Server is listening on [ 'any' <ipv4> 1433]`
 
 ### Step 5: Restart SQL Server (Crucial Step!)
 🛑 Important: SQL Server will not load its structural security rule changes until a complete restart of the service occurs.
